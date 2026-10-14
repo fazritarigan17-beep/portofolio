@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio Personal - Mhd Hidayat Fajri Tarigan. Lulusan S1 Sistem Informasi UMSU, Pengelolaan Data, Administrasi, dan Pengembangan Sistem.">
+    <title>Mhd Hidayat Fajri Tarigan | Portofolio Personal</title>
+
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0b10',
+                        'dark-secondary': '#12141c',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-slate-200 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Background Ambient Glow Effects -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+        <div class="ambient-glow glow-1"></div>
+        <div class="ambient-glow glow-2"></div>
+        <div class="ambient-glow glow-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#hero" class="text-xl font-bold tracking-tight text-white flex items-center gap-2 group">
+                <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-400 flex items-center justify-center text-white font-black text-sm shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+                    HF
+                </span>
+                <span class="font-heading">Fajri Tarigan<span class="text-indigo-400">.</span></span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#about" class="nav-link">Tentang</a>
+                <a href="#education" class="nav-link">Pendidikan</a>
+                <a href="#experience" class="nav-link">Pengalaman</a>
+                <a href="#skills" class="nav-link">Keterampilan</a>
+                <a href="#projects" class="nav-link">Proyek</a>
+                <a href="#contact" class="nav-link">Kontak</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://wa.me/6282174071590" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Hubungi WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-toggle" aria-label="Buka Menu" class="md:hidden text-slate-300 hover:text-white p-2 rounded-lg bg-white/5 border border-white/10">
+                <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-secondary/95 backdrop-blur-xl border-b border-white/10 px-6 py-6 transition-all duration-300">
+            <nav class="flex flex-col gap-4">
+                <a href="#about" class="mobile-nav-link">Tentang</a>
+                <a href="#education" class="mobile-nav-link">Pendidikan</a>
+                <a href="#experience" class="mobile-nav-link">Pengalaman</a>
+                <a href="#skills" class="mobile-nav-link">Keterampilan</a>
+                <a href="#projects" class="mobile-nav-link">Proyek</a>
+                <a href="#contact" class="mobile-nav-link">Kontak</a>
+                <a href="https://wa.me/6282174071590" target="_blank" rel="noopener noreferrer" class="btn btn-primary justify-center mt-2">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Hubungi WhatsApp</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="relative">
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen pt-32 pb-20 flex items-center">
+            <div class="max-w-6xl mx-auto px-6 w-full">
+                <div class="grid md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-7 space-y-6">
+                        <!-- Status Pill -->
+                        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium tracking-wide">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                            Tersedia untuk Peluang Karier & Kolaborasi
+                        </div>
+
+                        <!-- Main Heading -->
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white font-heading leading-tight">
+                            Halo, saya <br class="hidden sm:inline">
+                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-sky-300 to-indigo-300">
+                                Mhd Hidayat Fajri Tarigan
+                            </span>
+                        </h1>
+
+                        <p class="text-lg sm:text-xl text-slate-300 font-medium">
+                            S1 Sistem Informasi • Pengelolaan Data & Administrasi Sistem
+                        </p>
+
+                        <!-- Intro Paragraph -->
+                        <p class="text-slate-400 text-base leading-relaxed max-w-xl">
+                            Lulusan S1 Sistem Informasi Universitas Muhammadiyah Sumatera Utara. Memiliki pemahaman dalam teknologi informasi, pengelolaan data, dan administrasi dengan kemampuan berpikir sistematis, analitis, serta adaptif.
+                        </p>
+
+                        <!-- Buttons & CTA -->
+                        <div class="flex flex-wrap items-center gap-4 pt-2">
+                            <a href="#projects" class="btn btn-primary">
+                                <i data-lucide="folder-git-2" class="w-4 h-4"></i>
+                                <span>Lihat Proyek</span>
+                            </a>
+                            <a href="#contact" class="btn btn-secondary">
+                                <i data-lucide="mail" class="w-4 h-4"></i>
+                                <span>Kontak Saya</span>
+                            </a>
+                        </div>
+
+                        <!-- Contact Quick Highlights -->
+                        <div class="pt-6 flex flex-wrap items-center gap-5 text-slate-400 text-sm">
+                            <div class="flex items-center gap-2 text-slate-300">
+                                <i data-lucide="map-pin" class="w-4 h-4 text-indigo-400"></i>
+                                <span>Sumatera Utara, Indonesia</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-300">
+                                <i data-lucide="mail" class="w-4 h-4 text-sky-400"></i>
+                                <span>fazritarigan17@gmail.com</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-slate-300">
+                                <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>
+                                <span>+62 821-7407-1590</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hero Visual Card / Profile Image -->
+                    <div class="md:col-span-5 flex justify-center">
+                        <div class="relative group">
+                            <!-- Glow Behind -->
+                            <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+                            
+                            <!-- Main Frame -->
+                            <div class="relative w-72 h-88 sm:w-80 sm:h-96 rounded-3xl bg-dark-secondary border border-white/10 overflow-hidden flex flex-col justify-end p-6 shadow-2xl">
+                                <!-- Profile Silhouette / Graphic -->
+                                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-dark/40 to-dark flex items-center justify-center">
+                                    <div class="w-44 h-44 rounded-full bg-gradient-to-tr from-indigo-600/30 to-sky-400/20 flex items-center justify-center border border-indigo-400/20 text-indigo-300">
+                                        <i data-lucide="user" class="w-24 h-24 stroke-[1.25]"></i>
+                                    </div>
+                                </div>
+
+                                <!-- Floating Badge Info -->
+                                <div class="relative z-10 glass-card p-4 rounded-2xl border border-white/10 backdrop-blur-md">
+                                    <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+                                        <span>Bidang Keahlian</span>
+                                        <span class="text-emerald-400 font-medium">S1 Sistem Informasi</span>
+                                    </div>
+                                    <div class="text-sm font-semibold text-white">IT & Data Management</div>
+                                    <div class="text-xs text-slate-400 mt-1 flex flex-wrap gap-1.5">
+                                        <span class="tag">Pengolahan Data</span>
+                                        <span class="tag">Administrasi</span>
+                                        <span class="tag">Python & Java</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-24 border-t border-white/5 relative">
+            <div class="max-w-6xl mx-auto px-6">
+                <!-- Section Header -->
+                <div class="mb-16">
+                    <span class="section-badge">Ringkasan Profil</span>
+                    <h2 class="section-title">Tentang Saya</h2>
+                    <p class="section-subtitle">Dedikasi dalam penerapan teknologi informasi, pengelolaan data yang akurat, dan administrasi sistem yang efektif.</p>
+                </div>
+
+                <div class="grid md:grid-cols-12 gap-12 items-center">
+                    <div class="md:col-span-6 space-y-6 text-slate-300 leading-relaxed">
+                        <p>
+                            Saya adalah lulusan <strong>S1 Sistem Informasi</strong> dari <strong>Universitas Muhammadiyah Sumatera Utara (UMSU)</strong> dengan IPK <strong>3.63 / 4.00</strong>. Saya memiliki ketertarikan dan pemahaman yang kuat di bidang teknologi informasi, pengelolaan data, serta tata kelola administrasi dokumen.
+                        </p>
+                        <p>
+                            Terbiasa berpikir secara sistematis dan analitis untuk memecahkan masalah operasional. Memiliki pengalaman nyata melalui kerja praktik di instansi PDAM TIRTANADI serta pengembangan proyek perangkat lunak, baik sistem pakar berbasis web maupun aplikasi mobile. Saya mampu beradaptasi cepat, bekerja sama secara solid dalam tim, dan selalu terbuka untuk mempelajari teknologi baru.
+                        </p>
+                        
+                        <!-- Personal Highlights List -->
+                        <div class="grid sm:grid-cols-2 gap-4 pt-4">
+                            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-indigo-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-white">Berpikir Sistematis</h4>
+                                    <p class="text-xs text-slate-400 mt-0.5">Analisis alur data dan proses kerja terstruktur.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-indigo-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-white">Pengelolaan Data</h4>
+                                    <p class="text-xs text-slate-400 mt-0.5">Input, verifikasi, dan manajemen dokumen rapi.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-indigo-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-white">Pengembangan Sistem</h4>
+                                    <p class="text-xs text-slate-400 mt-0.5">Implementasi sistem pakar web & mobile apps.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-indigo-400 mt-0.5 shrink-0"></i>
+                                <div>
+                                    <h4 class="text-sm font-semibold text-white">Kolaboratif & Adaptif</h4>
+                                    <p class="text-xs text-slate-400 mt-0.5">Mampu bekerja dalam tim instansi & cepat belajar.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stat Cards Grid -->
+                    <div class="md:col-span-6 grid grid-cols-2 gap-4">
+                        <div class="stat-card">
+                            <div class="text-4xl font-extrabold text-white font-heading mb-1">3.63</div>
+                            <div class="text-sm font-medium text-indigo-300">Indeks Prestasi Kumulatif (IPK)</div>
+                            <div class="text-xs text-slate-400 mt-2">Skala 4.00 di Universitas Muhammadiyah Sumatera Utara.</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-4xl font-extrabold text-white font-heading mb-1">3+</div>
+                            <div class="text-sm font-medium text-sky-300">Proyek Dikembangkan</div>
+                            <div class="text-xs text-slate-400 mt-2">Sistem Pakar Web, Web Keuangan ZIIMONEY, & Aplikasi Android.</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-4xl font-extrabold text-white font-heading mb-1">PDAM</div>
+                            <div class="text-sm font-medium text-emerald-300">Pengalaman Kerja Praktik</div>
+                            <div class="text-xs text-slate-400 mt-2">PDAM TIRTANADI - Administrasi & operasional instansi.</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="text-4xl font-extrabold text-white font-heading mb-1">2026</div>
+                            <div class="text-sm font-medium text-indigo-300">Tahun Kelulusan S1</div>
+                            <div class="text-xs text-slate-400 mt-2">Menyelesaikan studi S1 Sistem Informasi tepat waktu.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education History Section -->
+        <section id="education" class="py-24 border-t border-white/5 relative bg-white/[0.01]">
+            <div class="max-w-6xl mx-auto px-6">
+                <!-- Section Header -->
+                <div class="mb-16">
+                    <span class="section-badge">Riwayat Akademik</span>
+                    <h2 class="section-title">Riwayat Pendidikan</h2>
+                    <p class="section-subtitle">Latar belakang pendidikan formal yang menjadi fondasi keahlian di bidang teknologi informasi dan analisis sistem.</p>
+                </div>
+
+                <!-- Education Timeline -->
+                <div class="relative pl-6 md:pl-10 border-l border-white/10 space-y-12 max-w-4xl mx-auto">
+                    
+                    <!-- UMSU Degree -->
+                    <div class="relative group">
+                        <!-- Timeline Dot -->
+                        <div class="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-dark border-2 border-indigo-400 group-hover:scale-125 group-hover:bg-indigo-500 transition-all duration-300"></div>
+
+                        <div class="card p-6 md:p-8 rounded-2xl border border-white/5 bg-white/[0.02] hover:border-indigo-500/30 transition-all">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+                                <span class="px-3 py-1 text-xs font-semibold rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
+                                    2022 — Juni 2026
+                                </span>
+                                <span class="text-xs text-slate-400 flex items-center gap-1.5">
+                                    <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Medan, Sumatera Utara
+                                </span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white font-heading">S1 Sistem Informasi</h3>
+                            <h4 class="text-indigo-400 font-medium text-sm mt-1">Universitas Muhammadiyah Sumatera Utara (UMSU)</h4>
+                            
+                            <div class="mt-3 flex items-center gap-3">
+                                <span class="px-2.5 py-1 text-xs font-bold rounded-lg bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">
+                                    GPA: 3.63 / 4.00
+                                </span>
+                                <span class="text-xs text-slate-400">Predikat Sangat Memuaskan</span>
+                            </div>
+
+                            <p class="text-slate-300 text-sm mt-4 leading-relaxed">
+                                Mempelajari perancangan sistem informasi, manajemen basis data, algoritma kecerdasan buatan/sistem pakar, analisis proses bisnis, serta pemanfaatan teknologi informasi untuk kebutuhan operasional organisasi.
+                            </p>
+
+                            <!-- Proyek Akhir Highlight -->
+                            <div class="mt-5 p-4 rounded-xl bg-white/[0.03] border border-white/5">
+                                <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                                    <i data-lucide="file-text" class="w-3.5 h-3.5 text-indigo-400"></i>
+                                    Proyek Akhir / Skripsi:
+                                </div>
+                                <div class="text-sm font-semibold text-white">
+                                    Sistem Pakar Diagnosa Kerusakan Hardware Laptop Menggunakan Metode Certainty Factor Berbasis Web
+                                </div>
+                                <p class="text-xs text-slate-400 mt-1">
+                                    Menyusun basis pengetahuan pakar dan mengimplementasikan algoritma perhitungan tingkat kepastian (Certainty Factor) ke dalam sistem berbasis web interaktif.
+                                </p>
+                            </div>
+
+                            <div class="mt-4 flex flex-wrap gap-2">
+                                <span class="tag">Sistem Informasi</span>
+                                <span class="tag">Sistem Pakar (Certainty Factor)</span>
+                                <span class="tag">Pengolahan Data</span>
+                                <span class="tag">Analisis Sistem</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24 border-t border-white/5 relative">
+            <div class="max-w-6xl mx-auto px-6">
+                <!-- Section Header -->
+                <div class="mb-16">
+                    <span class="section-badge">Pengalaman Kerja</span>
+                    <h2 class="section-title">Pengalaman Kerja & Praktik</h2>
+                    <p class="section-subtitle">Pengalaman nyata dalam mendukung kegiatan operasional, tata kelola data, dan administrasi instansi.</p>
+                </div>
+
+                <div class="max-w-3xl mx-auto">
+                    <!-- Exp Card: PDAM Tirtanadi -->
+                    <div class="exp-card">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full bg-indigo-500/10 text-indigo-300 border border-indigo-500/20">
+                                Kerja Praktik
+                            </span>
+                            <span class="text-xs text-slate-400 flex items-center gap-1">
+                                <i data-lucide="building" class="w-3.5 h-3.5 text-slate-500"></i> Instansi BUMD
+                            </span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white font-heading">Kerja Praktik — Bagian Administrasi & Operasional</h3>
+                        <div class="text-base font-semibold text-indigo-400 mt-1">PDAM TIRTANADI</div>
+                        <p class="text-xs text-slate-400 mt-1">Sumatera Utara, Indonesia</p>
+
+                        <div class="mt-6 space-y-3 text-slate-300 text-sm leading-relaxed">
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-indigo-500/10 text-indigo-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-3 h-3"></i>
+                                </div>
+                                <span><strong>Administrasi & Operasional:</strong> Mendukung secara aktif kegiatan administrasi dan kelancaran operasional harian kantor.</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-indigo-500/10 text-indigo-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-3 h-3"></i>
+                                </div>
+                                <span><strong>Pengolahan Data & Dokumen:</strong> Bertanggung jawab dalam mengelola, menginput, memverifikasi, dan merapikan arsip data serta dokumen penting agar tersusun sistematis.</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-indigo-500/10 text-indigo-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-3 h-3"></i>
+                                </div>
+                                <span><strong>Koordinasi Tim Kerja:</strong> Berkoordinasi secara efektif dengan tim antar-bagian guna memastikan seluruh tugas selesai tepat waktu dan sesuai standar.</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full bg-indigo-500/10 text-indigo-400 flex items-center justify-center shrink-0 mt-0.5">
+                                    <i data-lucide="check" class="w-3 h-3"></i>
+                                </div>
+                                <span><strong>Pelayanan Publik:</strong> Memahami alur kerja instansi pelayanan air minum dan tata cara memberikan dukungan pelayanan yang baik kepada masyarakat.</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-4 border-t border-white/5 flex flex-wrap gap-2">
+                            <span class="tag">Administrasi Perkantoran</span>
+                            <span class="tag">Pengolahan Data</span>
+                            <span class="tag">Pengarsipan Dokumen</span>
+                            <span class="tag">Microsoft Office</span>
+                            <span class="tag">Kerja Sama Tim</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 border-t border-white/5 relative bg-white/[0.01]">
+            <div class="max-w-6xl mx-auto px-6">
+                <!-- Section Header -->
+                <div class="mb-16">
+                    <span class="section-badge">Keahlian & Kemampuan</span>
+                    <h2 class="section-title">Keterampilan</h2>
+                    <p class="section-subtitle">Kompetensi teknis, pengolahan data, pemrograman, serta perangkat lunak yang saya kuasai.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Skill Group 1: Administrasi & Office -->
+                    <div class="skill-category-card">
+                        <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-5">
+                            <i data-lucide="file-spreadsheet" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white font-heading mb-3">Office & Administrasi</h3>
+                        <p class="text-xs text-slate-400 mb-5">Manajemen berkas, pembuatan laporan, dan operasional dokumen.</p>
+                        
+                        <div class="space-y-3">
+                            <div class="skill-item">
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-slate-300">Microsoft Excel (Formula & Data)</span>
+                                    <span class="text-indigo-400">90%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-slate-300">Microsoft Word (Dokumen Resmi)</span>
+                                    <span class="text-indigo-400">92%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 92%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-slate-300">Microsoft PowerPoint</span>
+                                    <span class="text-indigo-400">88%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 88%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-slate-300">Pengarsipan & Pengolahan Dokumen</span>
+                                    <span class="text-indigo-400">90%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Group 2: Bahasa Pemrograman & Mobile -->
+                    <div class="skill-category-card">
+                        <div class="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 mb-5">
+                            <i data-lucide="code" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white font-heading mb-3">Bahasa Pemrograman</h3>
+                        <p class="text-xs text-slate-400 mb-5">Logika algoritma, scripting, dan pengembangan software.</p>
+                        
+                        <div class="space-y-3">
+                            <div class="skill-item">
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-slate-300">Python</span>
+                                    <span class="text-sky-400">85%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-slate-300">Java</span>
+                                    <span class="text-sky-400">82%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 82%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-slate-300">Android Studio (Mobile Dev)</span>
+                                    <span class="text-sky-400">80%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 80%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-slate-300">HTML & Web Dasar</span>
+                                    <span class="text-sky-400">85%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Group 3: Data & Sistem Informasi -->
+                    <div class="skill-category-card">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-5">
+                            <i data-lucide="database" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white font-heading mb-3">Data & Sistem Informasi</h3>
+                        <p class="text-xs text-slate-400 mb-5">Pengolahan informasi, manajemen database, dan sistem pakar.</p>
+                        
+                        <div class="space-y-3">
+                            <div class="skill-item">
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-slate-300">Pengolahan Data & Informasi</span>
+                                    <span class="text-emerald-400">90%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 90%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-slate-300">Penggunaan Sistem Informasi</span>
+                                    <span class="text-emerald-400">88%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 88%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-slate-300">Metode Certainty Factor</span>
+                                    <span class="text-emerald-400">85%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 85%"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="flex justify-between text-xs font-medium mb-1">
+                                    <span class="text-slate-300">Pengelolaan Database</span>
+                                    <span class="text-emerald-400">82%</span>
+                                </div>
+                                <div class="progress-bar"><div class="progress-fill" style="width: 82%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Soft Skills Pill Cloud -->
+                <div class="mt-12 p-6 rounded-2xl bg-white/[0.02] border border-white/5 flex flex-wrap items-center justify-between gap-4">
+                    <div class="text-sm font-semibold text-white flex items-center gap-2">
+                        <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
+                        Kemampuan Pendukung / Nilai Kerja:
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tag">Berpikir Sistematis & Analitis</span>
+                        <span class="tag">Pengelolaan & Kerapian Data</span>
+                        <span class="tag">Kerja Sama Tim</span>
+                        <span class="tag">Mudah Beradaptasi</span>
+                        <span class="tag">Cepat Mempelajari Hal Baru</span>
+                        <span class="tag">Komunikasi & Pelayanan Publik</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 border-t border-white/5 relative">
+            <div class="max-w-6xl mx-auto px-6">
+                <!-- Section Header -->
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                    <div>
+                        <span class="section-badge">Portofolio Karya</span>
+                        <h2 class="section-title">Daftar Proyek</h2>
+                        <p class="section-subtitle">Pengembangan aplikasi mandiri dan proyek akademik yang telah diselesaikan.</p>
+                    </div>
+
+                    <!-- Category Filter Buttons -->
+                    <div class="flex flex-wrap gap-2" id="project-filters">
+                        <button class="filter-btn active" data-filter="all">Semua Proyek</button>
+                        <button class="filter-btn" data-filter="web">Web App</button>
+                        <button class="filter-btn" data-filter="mobile">Mobile App</button>
+                        <button class="filter-btn" data-filter="skripsi">Skripsi / Sistem Pakar</button>
+                    </div>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="projects-container">
+                    
+                    <!-- Project 1: ZIIMONEY -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-thumbnail bg-gradient-to-br from-indigo-950 via-slate-900 to-dark">
+                            <div class="thumbnail-overlay">
+                                <div class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                                    <i data-lucide="wallet" class="w-6 h-6 text-indigo-400"></i>
+                                </div>
+                            </div>
+                            <span class="category-badge">Web App</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+                                <span>Proyek Mandiri</span>
+                                <span class="text-indigo-400 font-semibold">2026</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white font-heading group-hover:text-indigo-400 transition-colors">
+                                ZIIMONEY – Pengelolaan Keuangan Pribadi
+                            </h3>
+                            <p class="text-slate-400 text-sm mt-3 leading-relaxed flex-1">
+                                Aplikasi berbasis web untuk mencatat pemasukan dan pengeluaran harian. Dilengkapi dashboard ringkasan keuangan, fitur pencarian & penyaringan transaksi, pengelolaan target tabungan, autentikasi pengguna, serta integrasi database.
+                            </p>
+                            <div class="my-4 flex flex-wrap gap-1.5">
+                                <span class="tag">Web Based</span>
+                                <span class="tag">Database</span>
+                                <span class="tag">Dashboard Analytics</span>
+                                <span class="tag">Autentikasi</span>
+                            </div>
+                            <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+                                <span class="text-xs text-emerald-400 flex items-center gap-1.5">
+                                    <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Selesai Dikembangkan
+                                </span>
+                                <span class="text-xs text-slate-400">Proyek Mandiri 2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Sistem Pakar (Skripsi) -->
+                    <div class="project-card" data-category="skripsi">
+                        <div class="project-thumbnail bg-gradient-to-br from-cyan-950 via-slate-900 to-dark">
+                            <div class="thumbnail-overlay">
+                                <div class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                                    <i data-lucide="cpu" class="w-6 h-6 text-cyan-400"></i>
+                                </div>
+                            </div>
+                            <span class="category-badge">Sistem Pakar / Skripsi</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+                                <span>Proyek Akhir / Skripsi UMSU</span>
+                                <span class="text-cyan-400 font-semibold">2026</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white font-heading group-hover:text-cyan-400 transition-colors">
+                                Sistem Pakar Diagnosa Kerusakan Hardware Laptop
+                            </h3>
+                            <p class="text-slate-400 text-sm mt-3 leading-relaxed flex-1">
+                                Sistem berbasis web yang mengadopsi metode Certainty Factor untuk mendiagnosis kerusakan perangkat keras laptop berdasarkan gejala yang dialami. Menyusun basis pengetahuan pakar, menghitung nilai keyakinan, dan melakukan pengujian sistem secara terstruktur.
+                            </p>
+                            <div class="my-4 flex flex-wrap gap-1.5">
+                                <span class="tag">Certainty Factor</span>
+                                <span class="tag">Sistem Pakar</span>
+                                <span class="tag">Web Based</span>
+                                <span class="tag">Basis Pengetahuan</span>
+                            </div>
+                            <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+                                <span class="text-xs text-cyan-400 flex items-center gap-1.5">
+                                    <i data-lucide="award" class="w-3.5 h-3.5"></i> Skripsi S1 UMSU
+                                </span>
+                                <span class="text-xs text-slate-400">Tahun 2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: Android Reminder & Jadwal -->
+                    <div class="project-card" data-category="mobile">
+                        <div class="project-thumbnail bg-gradient-to-br from-emerald-950 via-slate-900 to-dark">
+                            <div class="thumbnail-overlay">
+                                <div class="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-md flex items-center justify-center text-white">
+                                    <i data-lucide="smartphone" class="w-6 h-6 text-emerald-400"></i>
+                                </div>
+                            </div>
+                            <span class="category-badge">Mobile App</span>
+                        </div>
+                        <div class="p-6 flex flex-col flex-1">
+                            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+                                <span>Proyek Mandiri</span>
+                                <span class="text-emerald-400 font-semibold">2025</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white font-heading group-hover:text-emerald-400 transition-colors">
+                                Aplikasi Jadwal Kuliah & Reminder Tugas
+                            </h3>
+                            <p class="text-slate-400 text-sm mt-3 leading-relaxed flex-1">
+                                Aplikasi mobile Android yang dirancang untuk mengelola jadwal perkuliahan dan tugas akademik. Memiliki fitur penambahan, pengeditan, serta notifikasi pengingat tenggat waktu tugas. Dikembangkan secara mandiri menggunakan Android Studio hingga siap dijalankan di perangkat fisik.
+                            </p>
+                            <div class="my-4 flex flex-wrap gap-1.5">
+                                <span class="tag">Android Studio</span>
+                                <span class="tag">Java</span>
+                                <span class="tag">Mobile Development</span>
+                                <span class="tag">Reminder Notification</span>
+                            </div>
+                            <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+                                <span class="text-xs text-emerald-400 flex items-center gap-1.5">
+                                    <i data-lucide="check-circle" class="w-3.5 h-3.5"></i> Berhasil Dijalankan
+                                </span>
+                                <span class="text-xs text-slate-400">Android Device</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 border-t border-white/5 relative bg-white/[0.01]">
+            <div class="max-w-6xl mx-auto px-6">
+                <!-- Section Header -->
+                <div class="mb-16">
+                    <span class="section-badge">Saluran Komunikasi</span>
+                    <h2 class="section-title">Kontak Saya</h2>
+                    <p class="section-subtitle">Silakan hubungi saya untuk peluang kerja, kerja sama, maupun diskusi lebih lanjut.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-12 gap-12">
+                    
+                    <!-- Contact Info Cards -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="card p-6 rounded-2xl border border-white/5 bg-white/[0.02]">
+                            <h3 class="text-xl font-bold text-white font-heading mb-3">Mari Terhubung</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                Saya siap berdiskusi mengenai lowongan pekerjaan, kolaborasi proyek teknologi informasi, pengolahan data, maupun administrasi.
+                            </p>
+
+                            <div class="space-y-4">
+                                <!-- Email with Copy Button -->
+                                <div class="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-9 h-9 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center shrink-0">
+                                            <i data-lucide="mail" class="w-4 h-4"></i>
+                                        </div>
+                                        <div>
+                                            <div class="text-xs text-slate-500">Email Pribadi</div>
+                                            <div class="text-sm font-medium text-white" id="email-address">fazritarigan17@gmail.com</div>
+                                        </div>
+                                    </div>
+                                    <button id="copy-email-btn" class="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-white/5 transition-colors" title="Salin Email">
+                                        <i data-lucide="copy" class="w-4 h-4"></i>
+                                    </button>
+                                </div>
+
+                                <!-- WhatsApp Direct -->
+                                <a href="https://wa.me/6282174071590" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.03] border border-white/5 hover:border-emerald-500/30 transition-colors group">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+                                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                        </div>
+                                        <div>
+                                            <div class="text-xs text-slate-500">WhatsApp / Telepon</div>
+                                            <div class="text-sm font-medium text-white group-hover:text-emerald-300 transition-colors">+62 821-7407-1590</div>
+                                        </div>
+                                    </div>
+                                    <i data-lucide="arrow-up-right" class="w-4 h-4 text-slate-500 group-hover:text-emerald-400 transition-colors"></i>
+                                </a>
+
+                                <!-- Location -->
+                                <div class="flex items-center gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                                    <div class="w-9 h-9 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center shrink-0">
+                                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-slate-500">Lokasi / Domisili</div>
+                                        <div class="text-sm font-medium text-white">Sumatera Utara, Indonesia</div>
+                                    </div>
+                                </div>
+
+                                <!-- Education Info -->
+                                <div class="flex items-center gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/5">
+                                    <div class="w-9 h-9 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0">
+                                        <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs text-slate-500">Almamater</div>
+                                        <div class="text-sm font-medium text-white">Universitas Muhammadiyah Sumatera Utara</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="lg:col-span-7">
+                        <div class="card p-6 md:p-8 rounded-2xl border border-white/5 bg-white/[0.02]">
+                            <h3 class="text-xl font-bold text-white font-heading mb-6">Kirim Pesan Langsung</h3>
+                            
+                            <form id="contact-form" class="space-y-5">
+                                <div class="grid sm:grid-cols-2 gap-5">
+                                    <div>
+                                        <label for="name" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Nama Anda</label>
+                                        <input type="text" id="name" name="name" required placeholder="Contoh: Budi Pratama" class="form-input">
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Alamat Email Anda</label>
+                                        <input type="email" id="email" name="email" required placeholder="nama@perusahaan.com" class="form-input">
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="subject" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Subjek Pesan</label>
+                                    <input type="text" id="subject" name="subject" required placeholder="Peluang Kerja / Kolaborasi / Pertanyaan" class="form-input">
+                                </div>
+
+                                <div>
+                                    <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Pesan Anda</label>
+                                    <textarea id="message" name="message" rows="5" required placeholder="Tuliskan pesan atau penawaran Anda di sini..." class="form-input resize-none"></textarea>
+                                </div>
+
+                                <button type="submit" id="submit-btn" class="btn btn-primary w-full justify-center py-3.5">
+                                    <i data-lucide="send" class="w-4 h-4"></i>
+                                    <span>Kirimkan Pesan</span>
+                                </button>
+                            </form>
+
+                            <!-- Toast Notification inside card -->
+                            <div id="form-toast" class="hidden mt-4 p-4 rounded-xl text-sm transition-all duration-300"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/10 bg-dark-secondary relative">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-2">
+                <span class="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-xs">
+                    HF
+                </span>
+                <span class="text-sm font-semibold text-white">Mhd Hidayat Fajri Tarigan</span>
+                <span class="text-xs text-slate-500">• S1 Sistem Informasi</span>
+            </div>
+
+            <div class="text-xs text-slate-500 text-center md:text-right">
+                © 2026 Mhd Hidayat Fajri Tarigan. Hak cipta dilindungi undang-undang.
+            </div>
+
+            <!-- Scroll To Top Button -->
+            <button id="back-to-top" aria-label="Kembali ke atas" class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-colors">
+                <i data-lucide="arrow-up" class="w-4 h-4"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- Copy Toast Floating Notification -->
+    <div id="toast-notify" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-2 px-4 py-3 rounded-xl bg-indigo-600 text-white shadow-xl text-sm font-medium">
+        <i data-lucide="check" class="w-4 h-4"></i>
+        <span id="toast-notify-text">Teks berhasil disalin!</span>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
