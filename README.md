@@ -51,6 +51,5 @@ Website portofolio personal dengan tema **Dark Mode Minimalis**, dirancang khusu
 
 ---
 
-## 🛠️ Cara Membuka Website
 
-Cukup buka File Explorer di folder `c:\Users\LENOVO\Downloads\portofolio`, lalu klik ganda (**double click**) pada file [**`index.html`**](file:///c:/Users/LENOVO/Downloads/portofolio/index.html). Website akan langsung berjalan secara responsif di browser favorit Anda.
+
